@@ -1,0 +1,206 @@
+@import '../variables';
+@import '../mixins/typography';
+
+// Base button styles
+@mixin sg-button($paddings: null, $textSize: null) {
+  @include sg-typography__button-body-text;
+
+	display: block;
+  width: max-content;
+  outline: none;
+  cursor: pointer;
+  background-color: $color--regular-white;
+  text-decoration: none;
+  @if ($textSize) {
+    font-size: $textSize;
+  }
+  @if ($paddings) {
+    padding: $paddings;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Styles for filled button variant
+@mixin sg-button--filled(
+  $textColor: $color--regular-white,
+  $backgroundColor: $color--primary
+) {
+  border-radius: 2px;
+  color: $textColor;
+  background: $backgroundColor;
+  border: 2px solid $backgroundColor;
+
+  &:hover,
+  &:focus {
+    background: $color--regular-white;
+    color: $backgroundColor;
+  }
+
+  // todo: maybe it would be better to not override default hover styles,
+  //  but add hover styles if hover effects are enabled.
+  //  like hover effect config should be false by default.
+  //  but it will cause a need to find all imported buttons and fix hover config.
+  &.sg-button--disable-hover-styles {
+    &:hover,
+    &:focus {
+      background-color: $backgroundColor;
+      color: $textColor;
+    }
+  }
+}
+
+// Styles for outlined button variant
+@mixin sg-button--outlined(
+  $textColor: $color--royal-blue,
+  $backgroundColor: $color--arctic-blue,
+  $hoverTextColor: null,
+) {
+  border-radius: 2px;
+  color: $textColor;
+  background: $color--regular-white;
+  border: 2px solid $backgroundColor;
+
+  &:hover,
+  &:focus {
+    background: $backgroundColor;
+    @if (hoverTextColor) {
+      color: $hoverTextColor;
+    } @else {
+      color: $textColor;
+    }
+  }
+
+  &.sg-button--disable-hover-styles {
+    &:hover,
+    &:focus {
+      background: $color--regular-white;
+      color: $textColor;
+    }
+  }
+}
+
+// Styles for outlined button variant
+@mixin sg-button--outlined-red-border(
+  $textColor: $color--royal-blue,
+  $backgroundColor: $color--primary,
+  $hoverTextColor: $color--regular-white,
+) {
+  border-radius: 2px;
+  color: $textColor;
+  background: $color--regular-white;
+  border: 2px solid $backgroundColor;
+
+  &:hover,
+  &:focus {
+    background: $backgroundColor;
+    @if (hoverTextColor) {
+      color: $hoverTextColor;
+    } @else {
+      color: $textColor;
+    }
+  }
+
+  &.sg-button--disable-hover-styles {
+    &:hover,
+    &:focus {
+      background: $color--regular-white;
+      color: $textColor;
+    }
+  }
+}
+
+
+// Styles for text button variant
+@mixin sg-button--text(
+  $textColor: $color--royal-blue,
+  $hoverTextColor: $color--primary
+) {
+  border: 0;
+  padding: 0;
+  color: $textColor;
+
+  &:hover,
+  &:focus {
+    color: $hoverTextColor;
+  }
+
+  &.sg-button--disable-hover-styles {
+    &:hover,
+    &:focus {
+      color: $textColor;
+    }
+  }
+}
+
+// Styles for icon
+@mixin sg-button--with-icon(
+  $iconColor: $color--royal-blue
+) {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    display: block;
+    margin-left: 20px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $color--regular-white;
+  }
+
+  &.sg-button--disable-hover-styles {
+    &:hover::after,
+    &:focus::after {
+      background-color: $iconColor !important;
+    }
+  }
+}
+
+@mixin sg-button--with-icon-arrow($color: $color--royal-blue) {
+  line-height: 14px;
+
+  &::after {
+    @include sg-icon--arrow-thick($color);
+
+    background-color: $color;
+    width: 5px;
+    height: 8px;
+    margin-left: 12px;
+  }
+}
+
+// Styles for uppercased text
+@mixin sg-button--text-uppercase {
+  text-transform: uppercase;
+}
+
+// Styles for underline on hover
+@mixin sg-button--text-underline-hover {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &.sg-button--disable-hover-styles {
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+    }
+  }
+}
+
+// Styles for stretch
+@mixin sg-button--stretched {
+  width: 100%;
+}
+
+// Styles for disable
+@mixin sg-button--disabled {
+  cursor: default;
+  pointer-events: none;
+}

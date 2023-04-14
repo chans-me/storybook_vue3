@@ -1,0 +1,56 @@
+@mixin sg-provider-logotype--default {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  @include sg-icon__default-provider-logo($border--color-primary);
+}
+
+
+@mixin sg-provider-logotype (
+  $sgProviderLogotypeSize: 65px
+) {
+  $sgProviderLogotypeSizeValue: var(--sgProviderLogotypeSize, #{$sgProviderLogotypeSize});
+
+  display: flex;
+  width: $sgProviderLogotypeSizeValue;
+  height: $sgProviderLogotypeSizeValue;
+  position: relative;
+
+  // Default provider logo is always under the real logo
+  &::before {
+    @include sg-provider-logotype--default;
+  }
+
+  img {
+    position: relative;
+    z-index: 2;
+    object-fit: contain;
+    background: $color--regular-white;
+    width: 100%;
+    max-width: 100%;
+
+    &[alt] {
+      font-size: 0;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $color--regular-white;
+      }
+
+      // Duplicating the provider logo in case the provider has a logo but it's invalid
+      &::after {
+        @include sg-provider-logotype--default;
+      }
+    }
+  }
+}

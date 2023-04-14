@@ -1,0 +1,60 @@
+@mixin sg-input-field {
+
+  &__input {
+    color: $color--royal-blue;
+    background: $color--regular-white;
+    border: 2px solid $color--arctic-blue;
+    text-overflow: ellipsis;
+    width: 189px;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 5px 9px;
+
+    @include sg-typography__button-body-text;
+    line-height: 16px;
+
+    &::placeholder {
+      color: $color--royal-blue;
+    }
+
+    &:focus {
+      border: 2px solid $color--clutch-navy !important;
+      border-radius: 0 !important;
+      outline: 0 !important;
+      box-shadow: rgba(62, 131, 158, 0.3) 0 0 10px 0;
+    }
+
+    &:not(:placeholder-shown) {
+      border: 2px solid $color--royal-blue;
+    }
+
+    // The reset search field button
+    &::-webkit-search-cancel-button {
+      position: relative;
+      right: -5px;
+      -webkit-appearance: none;
+      --b: 1px; /* the thickness */
+      width: 11px; /* the size */
+      aspect-ratio: 1;
+      background: conic-gradient(from 90deg at var(--b) var(--b), $color--regular-white 90deg, $color--royal-blue 0) calc(100% + var(--b) / 2) calc(100% + var(--b)/2)/
+        calc(50%  + var(--b)) calc(50% + var(--b));
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+  }
+
+  // Search icon
+  &__search-icon {
+    width: 10px;
+    height: 9px;
+    display: inline-block;
+    position: relative;
+    left: -23px;
+    top: 1px;
+    @include sg-icon__input-search;
+  }
+
+  &__input:not(:placeholder-shown) + &__search-icon {
+    display: none;
+  }
+}

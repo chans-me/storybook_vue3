@@ -1,0 +1,88 @@
+@mixin sg-social-media--link(
+  $sgSocialIconSize: 30px,
+  $sgSocialIconBackground: $icon--core-secondary,
+) {
+  // Component parameters
+  $sgSocialIconSizeValue: var(--sgSocialIconSize, #{$sgSocialIconSize});
+  $sgSocialIconBackgroundValue: var(--sgSocialIconBackground, #{$sgSocialIconBackground});
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $sgSocialIconSizeValue;
+  height: $sgSocialIconSizeValue;
+  border-radius: 50%;
+  background-color: $sgSocialIconBackgroundValue;
+
+  &::after {
+    content: '';
+    display: block;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+}
+
+@mixin sg-social-media--link-facebook (
+  $sgSocialIconColor: $color--regular-white
+) {
+  $sgSocialIconColorValue: var(--sgSocialIconColor, #{$sgSocialIconColor});
+
+  &::after {
+    width: 33%;
+    height: 66%;
+
+    @include sg-icon__facebook($sgSocialIconColorValue);
+  }
+}
+
+@mixin sg-social-media--link-twitter(
+  $sgSocialIconColor: $color--regular-white
+) {
+  $sgSocialIconColorValue: var(--sgSocialIconColor, #{$sgSocialIconColor});
+
+  &::after {
+    width: 60%;
+    height: 50%;
+
+    @include sg-icon__twitter($sgSocialIconColorValue);
+  }
+}
+
+@mixin sg-social-media--link-linkedin (
+  $sgSocialIconColor: $color--regular-white
+) {
+  $sgSocialIconColorValue: var(--sgSocialIconColor, #{$sgSocialIconColor});
+
+  &::after {
+    width: 54%;
+    height: 50%;
+
+    @include sg-icon__linkedin($sgSocialIconColorValue);
+  }
+}
+
+@mixin sg-social-media--link-instagram (
+  $sgSocialIconColor: $color--regular-white
+) {
+  $sgSocialIconColorValue: var(--sgSocialIconColor, #{$sgSocialIconColor});
+
+  &::after {
+    width: 63%;
+    height: 63%;
+
+    @include sg-icon__instagram($sgSocialIconColorValue);
+  }
+}
+
+@mixin sg-social-media--link-email (
+  $sgSocialIconColor: $color--regular-white
+) {
+  $sgSocialIconColorValue: var(--sgSocialIconColor, #{$sgSocialIconColor});
+
+  &::after {
+    width: 64%;
+    height: 50%;
+
+    @include sg-icon__email($sgSocialIconColorValue);
+  }
+}

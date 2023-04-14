@@ -1,0 +1,61 @@
+@mixin sg-list {
+    @include sg-typography__body-roboto;
+
+    font-size: 14px;
+    line-height: 22px;
+    color: $text--body;
+    padding-inline-start: 20px;
+    margin: 0;
+
+    li:not(:last-of-type) {
+        margin-bottom: 18px;
+    }
+
+    &.sg-list__diamond-bullets {
+        list-style-type: none;
+
+        li {
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: $color--iron-gray;
+                transform: rotate(45deg);
+                left: -14px;
+                top: 9px;
+            }
+        }
+
+        &.sg-list-large {
+            padding-inline-start: 25px;
+
+            li::before {
+                width: 8px;
+                height: 8px;
+                left: -20px;
+                top: 8px;
+            }
+        }
+    }
+
+    &.sg-list__disc-bullets {
+        list-style-type: disc;
+    }
+
+    &.sg-list__circle-bullets {
+        list-style-type: circle;
+    }
+
+    &.sg-list__square-bullets {
+        list-style-type: square;
+    }
+
+    &.sg-list-large {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

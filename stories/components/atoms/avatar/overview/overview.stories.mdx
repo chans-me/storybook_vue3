@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs';
+
+
+<Meta title="Components/Atoms/Avatar/Overview"/>
+
+<h1>Avatar</h1>
+
+<div>
+  <h2>Usage</h2>
+  <h3>Add HTML</h3>
+
+  <p>
+    Go to Avatar demo page, configure size and shape of the avatar, click 'Show code' button,
+    copy generated HTML and put it where you need your avatar.
+  </p>
+
+  <h3>Add styles</h3>
+
+  <p>You should import styles in your SCSS file:</p>
+
+  <code>
+    @import '~style-guide/stories/styles/export';
+    <br/><br/>
+    .sg-avatar &#123;<br/>
+    &emsp;&emsp;@include sg-avatar;<br/>
+    &#125;
+  </code>
+
+  <p>For any shape except the square shape you will need to import additional mixins:</p>
+
+  <code>
+    .sg-avatar__round &#123;<br/>
+    &emsp;&emsp;@include sg-avatar__round;<br/>
+    &#125;
+    <br/><br/>
+    .sg-avatar__hexagon &#123;<br/>
+    &emsp;&emsp;@include sg-avatar__hexagon;<br/>
+    &#125;
+  </code>
+
+  <p>The Avatar styles already have the default icon in case there's no image. To see it, try to clear SRC config on the demo page.</p>
+
+  <p>Also you can add some custom styles here if you need.</p>
+</div>

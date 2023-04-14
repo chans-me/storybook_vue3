@@ -1,0 +1,25 @@
+@mixin sg-cost-graph {
+    rect {
+        fill: $color--jade-green;
+        opacity: .2;
+    }
+
+    text {
+        @include sg-typography__body-roboto-small;
+
+        fill: $text--body;
+    }
+
+    .sg-cost-graph__active-column {
+        rect {
+            width: 30px;
+            opacity: 1;
+            fill: $color--marine-green;
+        }
+
+        text {
+            fill: $color--marine-green;
+            font-weight: 500;
+        }
+    }
+}

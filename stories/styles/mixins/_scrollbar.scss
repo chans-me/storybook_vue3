@@ -1,0 +1,24 @@
+@mixin sg-scrollbar {
+	overflow-x: scroll;
+
+	@-moz-document url-prefix() {
+        scrollbar-color: $color--royal-blue;
+        scrollbar-width: thin;
+	}
+
+	&::-webkit-scrollbar {
+		height: 8px;
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		background: $color--arctic-blue-medium;
+		border-radius: 8px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $color--royal-blue;
+		border-radius: 8px;
+	}
+}

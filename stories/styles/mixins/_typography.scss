@@ -1,0 +1,124 @@
+@mixin sg-typography__title {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: normal;
+  font-weight: normal;
+  margin: 0;
+}
+
+@mixin sg-typography__h1-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: normal;
+  font-weight: normal;
+  margin: 0;
+}
+
+@mixin sg-typography__card-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@mixin sg-typography__h3-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: normal;
+  font-weight: normal;
+  margin: 0;
+}
+
+@mixin sg-typography__section-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@mixin sg-typography__highlighted-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+@mixin sg-typography__subtext {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+}
+
+@mixin sg-typography__button-body-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin sg-typography__uppercase-large {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@mixin sg-typography__uppercase-small {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@mixin sg-typography__body-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin sg-typography__body-roboto-larger {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@mixin sg-typography__body-roboto-large {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin sg-typography__body-roboto-medium {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin sg-typography__body-roboto-small {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin sg-typography__body-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin sg-typography__body-lato-large {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin sg-typography__body-lato-medium {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin sg-typography__body-lato-small {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}

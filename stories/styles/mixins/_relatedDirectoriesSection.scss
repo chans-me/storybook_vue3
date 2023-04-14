@@ -1,0 +1,118 @@
+@mixin sg-related-directories-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 25px 25px 30px;
+    gap: 20px;
+    background-color: $color--arctic-blue-light;
+
+    @include sg-media__desktop-min {
+        grid-template-columns: auto 590px;
+        gap: 20px;
+    }
+
+    &__title {
+        @include sg-typography__card-title;
+
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 500;
+        color: $color--secondary;
+
+
+        @include sg-media__tablet-min {
+            margin-top: 20px;
+        }
+    }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        @include sg-media__tablet-min {
+            grid-template-columns: repeat(3, minmax(185px, 1fr));
+            gap: 15px;
+        }
+    }
+
+    &__link {
+        @include sg-typography__body-roboto;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 5px;
+        box-shadow: 0 0 10px $shadow--primary;
+        background-color: $color--regular-white;
+        border: 1px solid $border--color-primary;
+        padding: 20px 15px 20px 29px;
+        color: $text--hyperlink-rich;
+        font-size: 24px;
+        line-height: 36px;
+        text-decoration: none;
+        text-align: center;
+
+        @include sg-media__tablet-min {
+            flex-direction: column;
+            padding: 33px 14px 38px;
+            justify-content: flex-end;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+        }
+
+        &.coin::before {
+            width: 45px;
+            height: 33px;
+            margin-right: 36px;
+
+            @include sg-media__tablet-min {
+                width: 54px;
+                height: 39px;
+                margin-right: 0;
+                margin-bottom: 31px;
+            }
+
+            @include sg-icon__coin($color--jade-green);
+        }
+
+        &.bill::before {
+            width: 48px;
+            height: 33px;
+            margin-right: 32px;
+
+            @include sg-media__tablet-min {
+                width: 62px;
+                height: 42px;
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            @include sg-icon__bill($color--marine-green);
+        }
+
+        &.moneybag::before {
+            width: 53px;
+            height: 53px;
+            margin-right: 26px;
+
+            @include sg-media__tablet-min {
+                width: 60px;
+                height: 60px;
+                margin-right: 0;
+                margin-bottom: 21px;
+            }
+
+            @include sg-icon__moneybag($color--lochin-green);
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px $shadow--highlight;
+            color: $text--hyperlink-rich;
+            border: 1px solid $color--royal-blue;
+            text-decoration: underline;
+        }
+    }
+}

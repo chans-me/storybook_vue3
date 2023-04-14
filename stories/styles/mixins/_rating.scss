@@ -1,0 +1,53 @@
+@mixin sg-rating($sgRatingColor: $color--primary) {
+  $sgRatingColorValue: var(--sgRatingColor, #{$sgRatingColor});
+
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .sg-rating__number {
+    @include sg-typography__section-title;
+
+    color: $color--clutch-navy;
+    line-height: inherit;
+    margin-right: 10px;
+  }
+
+  .sg-rating__stars {
+    @include sg-stars($sgRatingColorValue);
+
+    text-decoration: none;
+  }
+
+  .sg-rating__reviews {
+    @include sg-button(null, 12px);
+    @include sg-button--text($sgRatingColorValue);
+    @include sg-button--text-uppercase;
+    @include sg-button--text-underline-hover;
+    @include sg-button--with-icon;
+
+    position: relative;
+    margin-left: 12px;
+    padding-top: 2px;
+    background-color: transparent;
+
+    &::after {
+      @include sg-icon__arrow($sgRatingColorValue);
+
+      display: inline-block;
+      position: relative;
+      width: 7px;
+      height: 7px;
+      margin-left: 9px;
+      transform: rotate(-90deg);
+    }
+
+    &:hover {
+      color: $sgRatingColorValue;
+
+      &::after {
+        background-color: $sgRatingColorValue;
+      }
+    }
+  }
+}

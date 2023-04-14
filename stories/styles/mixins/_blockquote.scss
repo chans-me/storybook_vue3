@@ -1,0 +1,8 @@
+@mixin sg-blockquote {
+    @include sg-typography__body-roboto;
+
+    font-size: 16px;
+    line-height: 26px;
+    color: $text--body;
+    margin: 0;
+}

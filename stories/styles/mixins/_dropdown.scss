@@ -1,0 +1,136 @@
+@mixin sg-dropdown() {
+
+  position: relative;
+  display: inline-block;
+  height: fit-content;
+
+  .sg-dropdown__caption {
+    display: none;
+  }
+
+  &--stretched {
+    width: 100%;
+  }
+
+  // Styles that are related only to dropdown button
+
+  &__btn {
+    @include sg-button;
+    @include sg-button--outlined;
+    @include sg-button--with-icon;
+    border-radius: 0;
+    padding: 0 8px;
+    width: 100%;
+    height: 30px; // todo: remove important everywhere
+    box-shadow: none;
+
+    display: flex;
+    align-items: center;
+    border: 2px solid $color--arctic-blue;
+
+    &:after {
+      margin-left: 9px;
+      margin-right: 1px;
+      width: 10px;
+      height: 5px !important;
+      background-color: $color--clutch-red !important;
+      transform: rotate(0deg) translateY(1px) !important;
+      mask-position: bottom !important;
+      -webkit-mask-position: bottom !important;
+      mask-image: url('data:image/svg+xml;charset=UTF-8,\ <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" fill-rule="evenodd" stroke="%23FF3D2E" d="M0 0L5.1 5 10 0.2" transform="translate(0 1)"/></svg>') !important;
+      -webkit-mask-image: url('data:image/svg+xml;charset=UTF-8,\ <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" fill-rule="evenodd" stroke="%23FF3D2E" d="M0 0L5.1 5 10 0.2" transform="translate(0 1)"/></svg>') !important;
+    }
+
+    &.sg-button--disable-hover-styles:hover::after,
+    &.sg-button--disable-hover-styles:focus::after {
+      background-color: $color--clutch-red !important;
+    }
+  }
+
+  &__button-title {
+    flex-grow: 10;
+    text-align: left;
+  }
+
+  // Styles for opened dropdown
+
+  &--open {
+    .sg-dropdown-list {
+      display: flex;
+    }
+
+    .sg-dropdown {
+
+      &__btn {
+        border: 2px solid $color--clutch-navy;
+        box-shadow: rgba(62, 131, 158, 0.3) 0 0 10px 0;
+
+        &:after {
+          transform: rotate(180deg) !important;
+        }
+      }
+    }
+  }
+
+  // Styles for focused dropdown
+
+  &--focus {
+    .sg-dropdown__btn {
+      border: 2px solid $color--clutch-navy;
+      box-shadow: rgba(62, 131, 158, 0.3) 0 0 10px 0;
+    }
+  }
+  &--expandable {
+    border-bottom: 1px solid $color--arctic-blue;
+
+    .sg-dropdown__btn {
+      padding: 15px 39px 15px 20px;
+      border: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      line-height: 19px;
+      color: $color--royal-blue;
+      flex-wrap: wrap;
+      box-shadow: none;
+
+      &:focus {
+        border: 0;
+        box-shadow: none;
+      }
+    }
+
+    .sg-dropdown--stretched {
+      width: 100%;
+    }
+
+    .sg-dropdown-list {
+      position: relative;
+      border: 0;
+      box-shadow: none;
+      max-height: 192px;
+      margin-bottom: 20px;
+      margin-top: -2px;
+      padding: 0 20px;
+    }
+
+    .sg-dropdown__caption {
+      order: 1;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    .sg-dropdown__caption-text {
+        margin-top: 9px;
+        display: block;
+        padding: 0;
+        font-size: 14px;
+        color: $color--iron-gray;
+
+        &:first-child {
+          margin-top: 9px;
+        }
+      }
+  }
+}

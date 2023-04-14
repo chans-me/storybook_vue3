@@ -1,0 +1,99 @@
+// Common variables file
+// It's already imported inside export file which is imported inside your service
+
+// Color variables
+
+// Brand colors
+$color--clutch-red: #ff3d2e;
+$color--clutch-navy: #17313b;
+
+// Base colors
+$color--iron-gray: #6a797d;
+$color--steel-blue: #3e839e;
+$color--arctic-blue: #cae0e7;
+$color--royal-blue: #08537e;
+
+// Secondary colors
+$color--cool-white: #e8eef0;
+
+// Essential colors
+$color--regular-white: #fff;
+$color--regular-black: #000;
+
+// Extended palette colors
+// First column in palette
+$color--spring-green: #7ed478;
+$color--mint-ultramarine: #62c9ad;
+$color--fountain-blue: #51c3bd;
+$color--aqua-pearl: #3ebccd;
+$color--capri-blue: #22b3e2;
+
+// Second column in palette
+$color--fern-green: #62ba56;
+$color--jade-green: #4ca97c;
+$color--marine-green: #3fa091;
+$color--lagoon-blue: #3094ab;
+$color--ocean-blue: #1b85ce;
+
+// Third column in palette
+$color--clover-green: #119027;
+$color--moss-green: #0d7539;
+$color--forest-green: #0b6656;
+$color--venice-blue: #08537e;
+$color--admiral-blue: #043ab4;
+$color--lochin-green: #267c87;
+$color--patina-green: #5d997e;
+
+// Other colors
+$color--gainsboro-gray: #ddd;
+$color--oyster-bay: #d4E5E7;
+$color--white-smoke: #f8f8f8;
+$color--sanjuan-blue: #2b4d5a;
+$color--plantation-blue: #274753;
+$color--alice-blue: #f5fcff;
+$color--lochinvar-blue: rgba(38, 124, 135, .2);
+$color--arctic-blue-medium: rgba(202, 224, 231, .5);
+$color--arctic-blue-light: rgba(202, 224, 231, .2);
+
+// Icon colors
+$icon--extended-primary: #cecece;
+$icon--core-primary: $color--royal-blue;
+$icon--core-secondary: $color--steel-blue;
+$icon--core-accent: $color--clutch-red;
+
+// Text colors
+$text--body: $color--iron-gray;
+$text--hyperlink: $color--steel-blue;
+$text--header-light: $color--regular-white;
+
+// Designer said that we want to switch to Royal Blue for links as Steel Blue didn't pass the accessibility tests
+$text--hyperlink-rich: $color--royal-blue;
+$text--undisclosed: $color--gainsboro-gray;
+
+// Border colors
+$border--color-primary: $color--arctic-blue;
+
+// Box shadows
+$shadow--primary: rgba(62, 131, 158, .3);
+$shadow--highlight: rgba(62, 131, 158, .7);
+$shadow--tooltip: rgba(0, 0, 0, .2);
+$shadow--sticky-blocks: rgba(0, 0, 0, .25);
+
+// Variables for media breakpoints
+$breakpoint--small-phone: 375px;
+$breakpoint--iphone: 525px;
+$breakpoint--iphone-min: 526px;
+$breakpoint--phone: 576px;
+$breakpoint--phone-min: 577px;
+$breakpoint--small-tablet: 767px;
+$breakpoint--small-tablet-min: 768px;
+$breakpoint--tablet: 991px;
+$breakpoint--tablet-min: 992px;
+$breakpoint--desktop: 1199px;
+$breakpoint--desktop-min: 1200px;
+$breakpoint--big-desktop: 1300px;
+$breakpoint--biggest-desktop: 1920px;
+
+// Base variables
+$color--primary: $color--clutch-red;
+$color--secondary: $color--clutch-navy;

@@ -1,0 +1,40 @@
+@mixin sg-grid {
+  $sgGridColumnNumber: var(--sgGridColumnNumber, 1);
+  $sgGridRowNumber: var(--sgGridRowNumber, 1);
+  $sgGridColumnGap: var(--sgGridColumnGap, 20px);
+  $sgGridRowGap: var(--sgGridRowGap, 20px);
+
+  display: grid;
+  grid-template-columns: repeat($sgGridColumnNumber, 1fr);
+  grid-template-rows: repeat($sgGridRowNumber, 1fr);
+  column-gap: $sgGridColumnGap;
+  row-gap: $sgGridRowGap;
+}
+
+@mixin sg-grid-auto {
+  $sgGridColumnNumber: var(--sgGridColumnNumber, 1);
+  $sgGridRowNumber: var(--sgGridRowNumber, 1);
+
+  grid-template-columns: repeat($sgGridColumnNumber, auto);
+  grid-template-rows: repeat($sgGridRowNumber, auto);
+}
+
+@mixin sg-grid__mobile-one-column {
+  @include sg-media__tablet-small {
+    grid-template-columns: 100% !important;
+  }
+}
+
+@mixin sg-grid__tablet-one-column {
+  @include sg-media__tablet {
+    grid-template-columns: 100% !important;
+  }
+}
+
+@mixin sg-grid__template-1-3 {
+  grid-template-columns: 33% auto;
+}
+
+@mixin sg-grid__template-1-3-inversive {
+  grid-template-columns: auto 33%;
+}

@@ -1,0 +1,35 @@
+@mixin sg-user {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-areas:
+        'avatar name'
+        'avatar headline';
+    row-gap: 5px;
+    column-gap: 15px;
+
+    .sg-user {
+        &__avatar {
+            grid-area: avatar;
+        }
+
+        &__name {
+            grid-area: name;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 500;
+            color: $text--body;
+            margin: 0;
+            align-self: flex-end;
+        }
+
+        &__headline {
+            @include sg-typography__body-roboto-medium;
+
+            line-height: 18px;
+            grid-area: headline;
+            color: $text--body;
+            margin: 0;
+        }
+    }
+}

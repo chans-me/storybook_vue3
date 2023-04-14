@@ -1,0 +1,24 @@
+@mixin sg-link {
+    $sgLinkColor: var(--sgLinkColor, $text--hyperlink);
+
+    @include sg-typography__body-roboto;
+
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: $sgLinkColor;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: $sgLinkColor;
+    }
+}
+
+@mixin sg-link-underlined {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

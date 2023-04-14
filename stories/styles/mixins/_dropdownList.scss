@@ -1,0 +1,31 @@
+@mixin sg-dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  min-width: 216px;
+  margin-top: 2px;
+  padding-top: 5px;
+  flex-direction: column;
+  text-align: left;
+  list-style: none;
+  color: $icon--core-primary;
+  background-color: $color--regular-white;
+  box-shadow: 0 0 10px 0 rgba(62, 131, 158, 0.3);
+  border: 2px solid $color--clutch-navy;
+  z-index: 1;
+  overflow-y: scroll;
+
+  @include sg-typography__button-body-text;
+
+  @include sg-media__tablet-small {
+    max-height: 365px;
+    min-width: 165px;
+  }
+
+  @include sg-media__iphone-min {
+    min-width: unset;
+    width: 100%;
+  }
+}

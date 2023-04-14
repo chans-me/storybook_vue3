@@ -1,0 +1,15 @@
+.sg-avatar {
+  @include sg-avatar;
+}
+
+.sg-avatar--square {
+  @include sg-avatar--square;
+}
+
+.sg-avatar--round {
+  @include sg-avatar--round;
+}
+
+.sg-avatar--hexagon {
+  @include sg-avatar--hexagon;
+}

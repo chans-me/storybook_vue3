@@ -1,0 +1,70 @@
+@mixin sg-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__text {
+    color: $color--royal-blue;
+
+    @include sg-typography__subtext;
+  }
+
+  &__link {
+    display: block;
+
+    &--icon {
+      font-size: 0;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 9px;
+        background-color: red;
+      }
+
+      &-first::after {
+        width: 8px;
+
+        @include sg-icon__arrow-pagination($color--clutch-red);
+      }
+
+      &-previous::after {
+        width: 6px;
+        transform: scaleX(-1);
+
+        @include sg-icon__arrow-thick($color--clutch-red);
+      }
+
+      &-next::after {
+        width: 6px;
+
+        @include sg-icon__arrow-thick($color--clutch-red);
+      }
+
+      &-last::after {
+        width: 8px;
+        transform: scaleX(-1);
+
+        @include sg-icon__arrow-pagination($color--clutch-red);
+      }
+    }
+  }
+
+  button.sg-pagination__link {
+    cursor: pointer;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    border: none;
+
+    &:disabled {
+      cursor: auto;
+      opacity: .4;
+    }
+  }
+}

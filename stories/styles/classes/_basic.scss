@@ -1,0 +1,18 @@
+.sg__p-remove-margin {
+    margin: 0;
+}
+
+.sg__image-cover {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.sg__image-stretch-mobile {
+    @include sg-media__tablet-small {
+        width: 100%;
+        max-width: auto;
+        height: auto;
+        object-fit: initial;
+    }
+}

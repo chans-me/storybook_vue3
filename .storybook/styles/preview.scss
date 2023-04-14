@@ -1,0 +1,14 @@
+// These styles will be applied only for preview inside Style Guide
+// They will not be exported into another service
+
+// Import essential files
+@import '../../stories/styles/export';
+
+// Import components styles
+@import '../../stories/styles/exportClasses';
+
+// Import base styles for preview
+@import './preview/base';
+
+// Import doc pages style
+@import './preview/docsStyles';

@@ -1,0 +1,70 @@
+@mixin sg-colored-card {
+
+  padding: 10px 10px 17px;
+  border: 1px solid $border--color-primary;
+  color: $text--body;
+  background: $color--regular-white;
+  box-shadow: 0 0 10px $shadow--primary;
+  border-radius: 5px;
+
+  @include sg-typography__button-body-text;
+
+  line-height: 18px;
+}
+
+@mixin sg-colored-card--border-top (
+  $sgCardColor: $color--primary,
+  $sgCardBorderWidth: 5px
+  ) {
+  $sgCardColorValue: var(--sgCardColor, #{$sgCardColor});
+  $sgCardBorderWidthValue: var(--sgCardBorderWidth, #{sgCardBorderWidth});
+
+  border-top: $sgCardBorderWidthValue solid $sgCardColorValue;
+}
+
+@mixin sg-colored-card--border-bottom (
+  $sgCardColor: $color--primary,
+  $sgCardBorderWidth: 5px
+  ) {
+  $sgCardColorValue: var(--sgCardColor, #{$sgCardColor});
+  $sgCardBorderWidthValue: var(--sgCardBorderWidth, #{sgCardBorderWidth});
+
+  border-bottom: $sgCardBorderWidthValue solid $sgCardColorValue;
+}
+
+@mixin sg-colored-card--border-left (
+  $sgCardColor: $color--primary,
+  $sgCardBorderWidth: 5px
+  ) {
+  $sgCardColorValue: var(--sgCardColor, #{$sgCardColor});
+  $sgCardBorderWidthValue: var(--sgCardBorderWidth, #{sgCardBorderWidth});
+
+  border-left: $sgCardBorderWidthValue solid $sgCardColorValue;
+}
+
+@mixin sg-colored-card--border-right (
+  $sgCardColor: $color--primary,
+  $sgCardBorderWidth: 5px
+  ) {
+  $sgCardColorValue: var(--sgCardColor, #{$sgCardColor});
+  $sgCardBorderWidthValue: var(--sgCardBorderWidth, #{sgCardBorderWidth});
+
+  border-right: $sgCardBorderWidthValue solid $sgCardColorValue;
+}
+
+@mixin sg-colored-card--text {
+  margin: 0;
+}
+
+@mixin sg-colored-card--title {
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+
+@mixin sg-colored-card--accent ($sgCardColor: $color--primary) {
+  $sgCardColorValue: var(--sgCardColor, #{$sgCardColor});
+
+  font-size: 28px;
+  line-height: 36px;
+  color: $sgCardColorValue;
+}

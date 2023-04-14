@@ -1,0 +1,17 @@
+@mixin sg-label {
+  font-weight: normal;
+  border-right: 2px solid $color--arctic-blue !important;
+  background: #fff;
+  padding: 0 9px 0 0;
+  margin-bottom: 0;
+  margin-right: 9px;
+  cursor: pointer;
+  color: $color--iron-gray;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  @include sg-typography__button-body-text;
+
+  line-height: 16px;
+}

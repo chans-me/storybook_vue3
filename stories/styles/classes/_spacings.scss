@@ -1,0 +1,672 @@
+$spacer: 50px;
+
+// Margins
+// Margin for 4 sides
+.sg__m-0 {
+    margin: 0;
+}
+
+.sg__m-1 {
+    margin: ($spacer * .25);
+}
+
+.sg__m-2 {
+    margin: ($spacer * .5);
+}
+
+.sg__m-3 {
+    margin: $spacer;
+}
+
+.sg__m-4 {
+    margin: ($spacer * 1.5);
+}
+
+.sg__m-5 {
+    margin: ($spacer * 3);
+}
+
+.sg__m-auto {
+    margin: auto;
+}
+
+// Margin top
+.sg__mt-0 {
+    margin-top: 0;
+}
+
+.sg__mt-1 {
+    margin-top: ($spacer * .25);
+}
+
+.sg__mt-2 {
+    margin-top: ($spacer * .5);
+}
+
+.sg__mt-3 {
+    margin-top: $spacer;
+}
+
+.sg__mt-4 {
+    margin-top: ($spacer * 1.5);
+}
+
+.sg__mt-5 {
+    margin-top: ($spacer * 3);
+}
+
+.sg__mt-auto {
+    margin-top: auto;
+}
+
+// Margin bottom
+.sg__mb-0 {
+    margin-bottom: 0;
+}
+
+.sg__mb-1 {
+    margin-bottom: ($spacer * .25);
+}
+
+.sg__mb-2 {
+    margin-bottom: ($spacer * .5);
+}
+
+.sg__mb-3 {
+    margin-bottom: $spacer;
+}
+
+.sg__mb-4 {
+    margin-bottom: ($spacer * 1.5);
+}
+
+.sg__mb-5 {
+    margin-bottom: ($spacer * 3);
+}
+
+.sg__mb-auto {
+    margin-bottom: auto;
+}
+
+// Margin left
+.sg__ml-0 {
+    margin-left: 0;
+}
+
+.sg__ml-1 {
+    margin-left: ($spacer * .25);
+}
+
+.sg__ml-2 {
+    margin-left: ($spacer * .5);
+}
+
+.sg__ml-3 {
+    margin-left: $spacer;
+}
+
+.sg__ml-4 {
+    margin-left: ($spacer * 1.5);
+}
+
+.sg__ml-5 {
+    margin-left: ($spacer * 3);
+}
+
+.sg__ml-auto {
+    margin-left: auto;
+}
+
+// Margin right
+.sg__mr-0 {
+    margin-right: 0;
+}
+
+.sg__mr-1 {
+    margin-right: ($spacer * .25);
+}
+
+.sg__mr-2 {
+    margin-right: ($spacer * .5);
+}
+
+.sg__mr-3 {
+    margin-right: $spacer;
+}
+
+.sg__mr-4 {
+    margin-right: ($spacer * 1.5);
+}
+
+.sg__mr-5 {
+    margin-right: ($spacer * 3);
+}
+
+.sg__mr-auto {
+    margin-right: auto;
+}
+
+// Margin X - set both margin-left and margin-right
+.sg__mx-0 {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.sg__mx-1 {
+    margin-right: ($spacer * .25);
+    margin-left: ($spacer * .25);
+}
+
+.sg__mx-2 {
+    margin-right: ($spacer * .5);
+    margin-left: ($spacer * .5);
+}
+
+.sg__mx-3 {
+    margin-right: $spacer;
+    margin-left: $spacer;
+}
+
+.sg__mx-4 {
+    margin-right: ($spacer * 1.5);
+    margin-left: ($spacer * 1.5);
+}
+
+.sg__mx-5 {
+    margin-right: ($spacer * 3);
+    margin-left: ($spacer * 3);
+}
+
+.sg__mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Margin Y - set both margin-top and margin-bottom
+.sg__my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sg__my-1 {
+    margin-top: ($spacer * .25);
+    margin-bottom: ($spacer * .25);
+}
+
+.sg__my-2 {
+    margin-top: ($spacer * .5);
+    margin-bottom: ($spacer * .5);
+}
+
+.sg__my-3 {
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+}
+
+.sg__my-4 {
+    margin-top: ($spacer * 1.5);
+    margin-bottom: ($spacer * 1.5);
+}
+
+.sg__my-5 {
+    margin-top: ($spacer * 3);
+    margin-bottom: ($spacer * 3);
+}
+
+.sg__my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+// Negative margins
+// Negative margins for 4 sides
+.sg__m-n-1 {
+    margin: -($spacer * .25);
+}
+
+.sg__m-n-2 {
+    margin: -($spacer * .5);
+}
+
+.sg__m-n-3 {
+    margin: -$spacer;
+}
+
+.sg__m-n-4 {
+    margin: -($spacer * 1.5);
+}
+
+.sg__m-n-5 {
+    margin: -($spacer * 3);
+}
+
+// Negative margins top
+.sg__mt-n-1 {
+    margin-top: -($spacer * .25);
+}
+
+.sg__mt-n-2 {
+    margin-top: -($spacer * .5);
+}
+
+.sg__mt-n-3 {
+    margin-top: -$spacer;
+}
+
+.sg__mt-n-4 {
+    margin-top: -($spacer * 1.5);
+}
+
+.sg__mt-n-5 {
+    margin-top: -($spacer * 3);
+}
+
+// Negative margins bottom
+.sg__mb-n-1 {
+    margin-bottom: -($spacer * .25);
+}
+
+.sg__mb-n-2 {
+    margin-bottom: -($spacer * .5);
+}
+
+.sg__mb-n-3 {
+    margin-bottom: -$spacer;
+}
+
+.sg__mb-n-4 {
+    margin-bottom: -($spacer * 1.5);
+}
+
+.sg__mb-n-5 {
+    margin-bottom: -($spacer * 3);
+}
+
+// Negative margins left
+.sg__ml-n-1 {
+    margin-left: -($spacer * .25);
+}
+
+.sg__ml-n-2 {
+    margin-left: -($spacer * .5);
+}
+
+.sg__ml-n-3 {
+    margin-left: -$spacer;
+}
+
+.sg__ml-n-4 {
+    margin-left: -($spacer * 1.5);
+}
+
+.sg__ml-n-5 {
+    margin-left: -($spacer * 3);
+}
+
+// Negative margins right
+.sg__mr-n-1 {
+    margin-right: -($spacer * .25);
+}
+
+.sg__mr-n-2 {
+    margin-right: -($spacer * .5);
+}
+
+.sg__mr-n-3 {
+    margin-right: -$spacer;
+}
+
+.sg__mr-n-4 {
+    margin-right: -($spacer * 1.5);
+}
+
+.sg__mr-n-5 {
+    margin-right: -($spacer * 3);
+}
+
+// Negative margin X - set both margin-left and margin-right
+.sg__mx-n-1 {
+    margin-right: -($spacer * .25);
+    margin-left: -($spacer * .25);
+}
+
+.sg__mx-n-2 {
+    margin-right: -($spacer * .5);
+    margin-left: -($spacer * .5);
+}
+
+.sg__mx-n-3 {
+    margin-right: -$spacer;
+    margin-left: -$spacer;
+}
+
+.sg__mx-n-4 {
+    margin-right: -($spacer * 1.5);
+    margin-left: -($spacer * 1.5);
+}
+
+.sg__mx-n-5 {
+    margin-right: -($spacer * 3);
+    margin-left: -($spacer * 3);
+}
+
+
+// Negative margin Y - set both margin-top and margin-bottom
+.sg__my-n-1 {
+    margin-top: -($spacer * .25);
+    margin-bottom: -($spacer * .25);
+}
+
+.sg__my-n-2 {
+    margin-top: -($spacer * .5);
+    margin-bottom: -($spacer * .5);
+}
+
+.sg__my-n-3 {
+    margin-top: -$spacer;
+    margin-bottom: -$spacer;
+}
+
+.sg__my-n-4 {
+    margin-top: -($spacer * 1.5);
+    margin-bottom: -($spacer * 1.5);
+}
+
+.sg__my-n-5 {
+    margin-top: -($spacer * 3);
+    margin-bottom: -($spacer * 3);
+}
+
+// Paddings
+// Padding for 4 sides
+.sg__p-0 {
+    padding: 0;
+}
+
+.sg__p-1 {
+    padding: ($spacer * .25);
+}
+
+.sg__p-2 {
+    padding: ($spacer * .5);
+}
+
+.sg__p-3 {
+    padding: $spacer;
+}
+
+.sg__p-4 {
+    padding: ($spacer * 1.5);
+}
+
+.sg__p-5 {
+    padding: ($spacer * 3);
+}
+
+.sg__p-auto {
+    padding: auto;
+}
+
+// Padding top
+.sg__pt-0 {
+    padding-top: 0;
+}
+
+.sg__pt-1 {
+    padding-top: ($spacer * .25);
+}
+
+.sg__pt-2 {
+    padding-top: ($spacer * .5);
+}
+
+.sg__pt-3 {
+    padding-top: $spacer;
+}
+
+.sg__pt-4 {
+    padding-top: ($spacer * 1.5);
+}
+
+.sg__pt-5 {
+    padding-top: ($spacer * 3);
+}
+
+.sg__pt-auto {
+    padding-top: auto;
+}
+
+// Padding bottom
+.sg__pb-0 {
+    padding-bottom: 0;
+}
+
+.sg__pb-1 {
+    padding-bottom: ($spacer * .25);
+}
+
+.sg__pb-2 {
+    padding-bottom: ($spacer * .5);
+}
+
+.sg__pb-3 {
+    padding-bottom: $spacer;
+}
+
+.sg__pb-4 {
+    padding-bottom: ($spacer * 1.5);
+}
+
+.sg__pb-5 {
+    padding-bottom: ($spacer * 3);
+}
+
+.sg__pb-auto {
+    padding-bottom: auto;
+}
+
+// Padding left
+.sg__pl-0 {
+    padding-left: 0;
+}
+
+.sg__pl-1 {
+    padding-left: ($spacer * .25);
+}
+
+.sg__pl-2 {
+    padding-left: ($spacer * .5);
+}
+
+.sg__pl-3 {
+    padding-left: $spacer;
+}
+
+.sg__pl-4 {
+    padding-left: ($spacer * 1.5);
+}
+
+.sg__pl-5 {
+    padding-left: ($spacer * 3);
+}
+
+.sg__pl-auto {
+    padding-left: auto;
+}
+
+// Padding right
+.sg__pr-0 {
+    padding-right: 0;
+}
+
+.sg__pr-1 {
+    padding-right: ($spacer * .25);
+}
+
+.sg__pr-2 {
+    padding-right: ($spacer * .5);
+}
+
+.sg__pr-3 {
+    padding-right: $spacer;
+}
+
+.sg__pr-4 {
+    padding-right: ($spacer * 1.5);
+}
+
+.sg__pr-5 {
+    padding-right: ($spacer * 3);
+}
+
+.sg__pr-auto {
+    padding-right: auto;
+}
+
+// Padding X - set both padding-left and padding-right
+.sg__px-0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sg__px-1 {
+    padding-right: ($spacer * .25);
+    padding-left: ($spacer * .25);
+}
+
+.sg__px-2 {
+    padding-right: ($spacer * .5);
+    padding-left: ($spacer * .5);
+}
+
+.sg__px-3 {
+    padding-right: $spacer;
+    padding-left: $spacer;
+}
+
+.sg__px-4 {
+    padding-right: ($spacer * 1.5);
+    padding-left: ($spacer * 1.5);
+}
+
+.sg__px-5 {
+    padding-right: ($spacer * 3);
+    padding-left: ($spacer * 3);
+}
+
+.sg__px-auto {
+    padding-right: auto;
+    padding-left: auto;
+}
+
+// Padding Y - set both padding-top and padding-bottom
+.sg__py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.sg__py-1 {
+    padding-top: ($spacer * .25);
+    padding-bottom: ($spacer * .25);
+}
+
+.sg__py-2 {
+    padding-top: ($spacer * .5);
+    padding-bottom: ($spacer * .5);
+}
+
+.sg__py-3 {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+}
+
+.sg__py-4 {
+    padding-top: ($spacer * 1.5);
+    padding-bottom: ($spacer * 1.5);
+}
+
+.sg__py-5 {
+    padding-top: ($spacer * 3);
+    padding-bottom: ($spacer * 3);
+}
+
+.sg__py-auto {
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+// Gaps
+// Gaps fpr both column and row
+.sg__g-0 {
+    gap: 0;
+}
+
+.sg__g-1 {
+    gap: ($spacer * .25);
+}
+
+.sg__g-2 {
+    gap: ($spacer * .5);
+}
+
+.sg__g-3 {
+    gap: $spacer;
+}
+
+.sg__g-4 {
+    gap: ($spacer * 1.5);
+}
+
+.sg__g-5 {
+    gap: ($spacer * 3);
+}
+
+// Row gaps
+.sg__gr-0 {
+    row-gap: 0;
+}
+
+.sg__gr-1 {
+    row-gap: ($spacer * .25);
+}
+
+.sg__gr-2 {
+    row-gap: ($spacer * .5);
+}
+
+.sg__gr-3 {
+    row-gap: $spacer;
+}
+
+.sg__gr-4 {
+    row-gap: ($spacer * 1.5);
+}
+
+.sg__gr-5 {
+    row-gap: ($spacer * 3);
+}
+
+// Column gaps
+.sg__gc-0 {
+    column-gap: 0;
+}
+
+.sg__gc-1 {
+    column-gap: ($spacer * .25);
+}
+
+.sg__gc-2 {
+    column-gap: ($spacer * .5);
+}
+
+.sg__gc-3 {
+    column-gap: $spacer;
+}
+
+.sg__gc-4 {
+    column-gap: ($spacer * 1.5);
+}
+
+.sg__gc-5 {
+    column-gap: ($spacer * 3);
+}

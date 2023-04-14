@@ -1,0 +1,11 @@
+// This is a file for collecting and exporting style classes for components
+// Import it to the page when you will use SG styles not as mixins but as classes
+
+// Classes
+@import './classes/borders';
+@import './classes/spacings';
+@import './classes/boxShadows';
+@import './classes/basic';
+
+// Atoms
+@import '../components/atoms/avatar/component/avatar';

@@ -1,0 +1,148 @@
+@mixin sg-shortlist-bookmark {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 11px;
+    height: 29px;
+    border: 1px solid $border--color-primary;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 10px $shadow--primary;
+    background-color: $color--regular-white;
+    justify-content: flex-end;
+    cursor: pointer;
+    z-index: 1;
+
+    &__message {
+        @include sg-typography__button-body-text;
+        line-height: 14px;
+        letter-spacing: .2px;
+        color: $color--venice-blue;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0 10px 0 0;
+        cursor: pointer;
+        pointer-events: initial;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &--hidden {
+            display: none;
+        }
+
+        &--grow {
+            animation-name: grow;
+            animation-duration: .2s;
+
+            .sg-shortlist-bookmark__message {
+                display: none;
+            }
+        }
+
+        &--shrink {
+            animation: shrink;
+            animation-duration: .2s;
+
+            .sg-shortlist-bookmark__message {
+                display: none;
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 14px;
+        height: 19px;
+        flex-shrink: 0;
+
+        @include sg-icon__shortlist-bookmark--default;
+    }
+
+    &.sg-shortlist-bookmark--default {
+        .sg-shortlist-bookmark__icon {
+            @include sg-icon__shortlist-bookmark--default;
+
+            background-size: 14px 19px;
+        }
+    }
+
+    &.sg-shortlist-bookmark--added {
+        padding-right: 5px;
+
+        .sg-shortlist-bookmark__message {
+            color: $color--clover-green;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .sg-shortlist-bookmark__icon {
+            margin-top: -1px;
+            width: 18px;
+            height: 20px;
+
+            @include sg-icon__shortlist-bookmark--added;
+        }
+    }
+
+    &.sg-shortlist-bookmark--active {
+        .sg-shortlist-bookmark__icon {
+            @include sg-icon__shortlist-bookmark--active;
+
+            background-size: 14px 19px;
+
+            &:hover {
+                @include sg-icon__shortlist-bookmark--remove;
+
+                background-size: 14px 19px;
+            }
+        }
+    }
+
+    &.sg-shortlist-bookmark--remove {
+        .sg-shortlist-bookmark__icon {
+            @include sg-icon__shortlist-bookmark--remove;
+
+            background-size: 14px 19px;
+        }
+    }
+
+    &.sg-shortlist-bookmark--removed {
+        .sg-shortlist-bookmark__message {
+            color: $color--primary;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .sg-shortlist-bookmark__icon {
+            @include sg-icon__shortlist-bookmark--removed;
+
+            background-size: 14px 19px;
+        }
+    }
+}
+
+@keyframes grow {
+    0% {
+        width: 37px;
+    }
+
+    100% {
+        width: 150px;
+    }
+}
+
+@keyframes shrink {
+    0% {
+        width: 150px;
+    }
+
+    100% {
+        width: 37px;
+    }
+}

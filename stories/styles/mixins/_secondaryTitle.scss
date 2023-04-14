@@ -1,0 +1,75 @@
+@mixin sg-secondary-title {
+  background-color: $color--cool-white;
+  position: relative;
+  padding: 10px 0;
+
+  @include sg-media__tablet-small-min {
+    background-color: $color--regular-white;
+    padding: 20px 0;
+  }
+
+  @include sg-media__desktop-min {
+    cursor: pointer;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: $color--clutch-navy;
+
+    @include sg-typography__subtext;
+    line-height: 25px;
+
+    @include sg-media__tablet-small-min {
+      color: $color--royal-blue;
+
+      @include sg-typography__card-title;
+
+      line-height: 25px;
+    }
+
+    &--link {
+      &:visited {
+        color: $color--clutch-navy;
+      }
+
+      @include sg-media__tablet-small-min {
+        &:visited {
+          color: $color--royal-blue;
+        }
+      }
+    }
+  }
+
+  // Icons
+
+  &--icon-plus {
+    .sg-secondary-title__text {
+      &:after {
+        content: '';
+        display: block;
+        --b: 2px; /* the thickness */
+        width: 14px; /* the size */
+        aspect-ratio: 1;
+        background: conic-gradient(from 90deg at var(--b) var(--b), transparent 90deg, $color--clutch-red 0) calc(100% + var(--b) / 2) calc(100% + var(--b)/2)/
+        calc(50%  + var(--b)) calc(50% + var(--b));
+      }
+    }
+  }
+
+  &--icon-arrow {
+    .sg-secondary-title__text {
+      &:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 16px;
+        @include sg-icon__arrow-thick($color--clutch-red);
+      }
+    }
+  }
+}

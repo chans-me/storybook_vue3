@@ -1,0 +1,45 @@
+@mixin sg-award-card {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: max-content auto max-content;
+    row-gap: 8px;
+    padding: 15px 10px;
+    box-shadow: 0px 0px 10px $shadow--primary;
+    border-radius: 5px;
+    background-color: $color--regular-white;
+    height: 100%;
+
+    @include sg-media__tablet-small-min {
+        padding: 20px 15px 25px;
+    }
+
+    .sg-award-card {
+        &__image {
+            width: auto;
+            height: 170px;
+            max-width: 100%;
+        }
+
+        &__title,
+        &__year {
+            @include sg-typography__subtext;
+
+            color: $color--secondary;
+            text-align: center;
+            margin: 0;
+
+            @include sg-media__tablet-small {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        &__title {
+            align-self: center;
+        }
+
+        &__year {
+            color: $text--body;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@mixin sg-info-card {
+    $sgInfoCardAccentColor: var(--sgInfoCardAccentColor, $color--clover-green);
+    $sgInfoCardBackgroundColor: var(--sgInfoCardBackgroundColor, rgba(17, 144, 39, .05));
+
+    height: 100%;
+    background-color: $sgInfoCardBackgroundColor;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    .sg-info-card {
+      &__title {
+          @include sg-typography__section-title;
+
+          color: $text--header-light;
+          background-color: $sgInfoCardAccentColor;
+          padding: 14px 5px 15px;
+          text-align: center;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+
+          @include sg-media__tablet-small-min {
+            font-size: 22px;
+            line-height: 30px;
+            padding: 12px 5px 13px;
+          }
+        }
+
+        &__body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 25px 10px 35px;
+
+          @include sg-media__tablet-small-min {
+            padding: 25px 14px 35px 21px;
+          }
+        }
+
+        &__icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 77px;
+          height: 55px;
+          margin-bottom: 28px;
+
+          @include sg-media__tablet-small-min {
+            width: 97px;
+            height: 70px;
+          }
+        }
+
+        &__text {
+          @include sg-typography__button-body-text;
+
+          color: $text--body;
+
+          @include sg-media__tablet-small-min {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+    }
+  }

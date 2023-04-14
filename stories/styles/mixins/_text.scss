@@ -1,0 +1,49 @@
+@mixin sg-text {
+  display: flex;
+  align-items: center;
+
+  .sg-text {
+    &__icon {
+      @include sg-icon;
+
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    &__title {
+      @include sg-typography__button-body-text;
+
+      line-height: 18px;
+      color: $color--secondary;
+    }
+  }
+
+  &__undisclosed {
+    .sg-text__title {
+      color: $text--undisclosed;
+    }
+  }
+
+  &__clickable {
+    .sg-text__title {
+      color: $text--hyperlink-rich;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__red {
+    .sg-text {
+      &__title {
+        color: $color--primary;
+      }
+
+      &__icon {
+        background-color: $icon--core-accent;
+      }
+    }
+  }
+}

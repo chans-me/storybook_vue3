@@ -1,0 +1,250 @@
+$border: 1px;
+
+// Mobile classes for borders
+.sg__b-remove-on-mobile {
+    @include sg-media__tablet-small {
+        border: none !important;
+    }
+}
+
+// Border colors
+.sg__b-primary {
+    border-color: $border--color-primary;
+}
+
+// Border for 4 sides
+.sg__b-1 {
+    border: $border solid $border--color-primary;
+}
+
+.sg__b-2 {
+    border: (2 * $border) solid $border--color-primary;
+}
+
+.sg__b-3 {
+    border: (3 * $border) solid $border--color-primary;
+}
+
+.sg__b-4 {
+    border: (4 * $border) solid $border--color-primary;
+}
+
+.sg__b-5 {
+    border: (5 * $border) solid $border--color-primary;
+}
+
+// Border top
+.sg__bt-1 {
+    border-top: $border solid $border--color-primary;
+}
+
+.sg__bt-2 {
+    border-top: (2 * $border) solid $border--color-primary;
+}
+
+.sg__bt-3 {
+    border-top: (3 * $border) solid $border--color-primary;
+}
+
+.sg__bt-4 {
+    border-top: (4 * $border) solid $border--color-primary;
+}
+
+.sg__bt-5 {
+    border-top: (5 * $border) solid $border--color-primary;
+}
+
+// Border bottom
+.sg__bb-1 {
+    border-bottom: $border solid $border--color-primary;
+}
+
+.sg__bb-2 {
+    border-bottom: (2 * $border) solid $border--color-primary;
+}
+
+.sg__bb-3 {
+    border-bottom: (3 * $border) solid $border--color-primary;
+}
+
+.sg__bb-4 {
+    border-bottom: (4 * $border) solid $border--color-primary;
+}
+
+.sg__bb-5 {
+    border-bottom: (5 * $border) solid $border--color-primary;
+}
+
+// Border left
+.sg__bl-1 {
+    border-left: $border solid $border--color-primary;
+}
+
+.sg__bl-2 {
+    border-left: (2 * $border) solid $border--color-primary;
+}
+
+.sg__bl-3 {
+    border-left: (3 * $border) solid $border--color-primary;
+}
+
+.sg__bl-4 {
+    border-left: (4 * $border) solid $border--color-primary;
+}
+
+.sg__bl-5 {
+    border-left: (5 * $border) solid $border--color-primary;
+}
+
+
+// Border right
+.sg__br-1 {
+    border-right: $border solid $border--color-primary;
+}
+
+.sg__br-2 {
+    border-right: (2 * $border) solid $border--color-primary;
+}
+
+.sg__br-3 {
+    border-right: (3 * $border) solid $border--color-primary;
+}
+
+.sg__br-4 {
+    border-right: (4 * $border) solid $border--color-primary;
+}
+
+.sg__br-5 {
+    border-right: (5 * $border) solid $border--color-primary;
+}
+
+
+// Border both left and right
+.sg__bx-1 {
+    border-right: $border solid $border--color-primary;
+    border-left: $border solid $border--color-primary;
+}
+
+.sg__bx-2 {
+    border-right: (2 * $border) solid $border--color-primary;
+    border-left: (2 * $border) solid $border--color-primary;
+}
+
+.sg__bx-3 {
+    border-right: (3 * $border) solid $border--color-primary;
+    border-left: (3 * $border) solid $border--color-primary;
+}
+
+.sg__bx-4 {
+    border-right: (4 * $border) solid $border--color-primary;
+    border-left: (4 * $border) solid $border--color-primary;
+}
+
+.sg__bx-5 {
+    border-right: (5 * $border) solid $border--color-primary;
+    border-left: (5 * $border) solid $border--color-primary;
+}
+
+// Border both top and bottom
+.sg__by-1 {
+    border-top: $border solid $border--color-primary;
+    border-bottom: $border solid $border--color-primary;
+}
+
+.sg__by-2 {
+    border-top: (2 * $border) solid $border--color-primary;
+    border-bottom: (2 * $border) solid $border--color-primary;
+}
+
+.sg__by-3 {
+    border-top: (3 * $border) solid $border--color-primary;
+    border-bottom: (3 * $border) solid $border--color-primary;
+}
+
+.sg__by-4 {
+    border-top: (4 * $border) solid $border--color-primary;
+    border-bottom: (4 * $border) solid $border--color-primary;
+}
+
+.sg__by-5 {
+    border-top: (5 * $border) solid $border--color-primary;
+    border-bottom: (5 * $border) solid $border--color-primary;
+}
+
+// Border radius
+// Border radius for 4 sides
+.sg__r-1 {
+    border-radius: (2 * $border);
+}
+
+.sg__r-2 {
+    border-radius: (5 * $border);
+}
+
+.sg__r-round {
+    border-radius: 50%;
+}
+
+// Border radius for top left and right
+.sg__rt-1 {
+    border-top-left-radius: (2 * $border);
+    border-top-right-radius: (2 * $border);
+}
+
+.sg__rt-2 {
+    border-top-left-radius: (5 * $border);
+    border-top-right-radius: (5 * $border);
+}
+
+.sg__rt-round {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+// Border radius for bottom left and right
+.sg__rb-1 {
+    border-bottom-left-radius: (2 * $border);
+    border-bottom-right-radius: (2 * $border);
+}
+
+.sg__rb-2 {
+    border-bottom-left-radius: (5 * $border);
+    border-bottom-right-radius: (5 * $border);
+}
+
+.sg__rb-round {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+// Border radius for left top and bottom
+.sg__rl-1 {
+    border-bottom-left-radius: (2 * $border);
+    border-top-left-radius: (2 * $border);
+}
+
+.sg__rl-2 {
+    border-bottom-left-radius: (5 * $border);
+    border-top-left-radius: (5 * $border);
+}
+
+.sg__rl-round {
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+// Border radius for left top and bottom
+.sg__rr-1 {
+    border-bottom-right-radius: (2 * $border);
+    border-top-right-radius: (2 * $border);
+}
+
+.sg__rr-2 {
+    border-bottom-right-radius: (5 * $border);
+    border-top-right-radius: (5 * $border);
+}
+
+.sg__rr-round {
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}

@@ -1,0 +1,74 @@
+@mixin sg-carousel {
+    &__item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .glide {
+        padding: 40px 112px 46px;
+
+        @include sg-media__phone {
+            padding: 20px 0 15px;
+        }
+
+        &__slides {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        &__slide {
+            height: auto;
+        }
+
+        &__arrows {
+            @include sg-media__phone {
+                display: none;
+            }
+        }
+
+        &__arrow {
+            position: absolute;
+            width: 17px;
+            height: 52px;
+            top: calc(50% - 59px);
+            border: 0;
+            cursor: pointer;
+
+            @include sg-icon__arrow-slider($color--venice-blue);
+
+            &--left {
+                left: 30px;
+                transform: rotate(180deg);
+            }
+
+            &--right {
+                right: 30px;
+            }
+        }
+
+        &__bullets {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+
+            @include sg-media__phone {
+                margin-top: 11px;
+                gap: 8px;
+            }
+        }
+
+        &__bullet {
+            width: 12px;
+            height: 12px;
+            background-color: $color--regular-white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &--active {
+                background-color: $color--secondary;
+            }
+        }
+    }
+}

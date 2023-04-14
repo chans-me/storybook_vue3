@@ -1,0 +1,43 @@
+@mixin sg-breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20px;
+
+    @include sg-media__tablet-small {
+      padding: 20px 15px;
+    }
+
+    &__link {
+      @include sg-typography__body-roboto-medium;
+
+      display: block;
+      color: $color--arctic-blue;
+      text-decoration: none;
+      line-height: normal;
+
+      &::after {
+        content: '>';
+        display: inline-block;
+        margin: auto 8px auto 10px;
+        font-size: 12px;
+        color: $border--color-primary;
+        pointer-events: none;
+      }
+
+      // Add styles for the last link - the current page
+      &:last-child {
+        color: $text--header-light;
+        pointer-events: none;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:hover {
+        color: $border--color-primary;
+        text-decoration: underline;
+      }
+    }
+}

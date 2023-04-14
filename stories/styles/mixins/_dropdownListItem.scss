@@ -1,0 +1,89 @@
+@mixin sg-dropdown-list-item {
+
+  @include sg-media__tablet-small {
+    padding: 13px 8px;
+  }
+
+  // Common styles for radio, checkbox and text list item
+
+  &__input {
+    display: none;
+  }
+
+  &__text-wrapper {
+    color: $color--royal-blue;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    background: $color--regular-white;
+    border-left: 2px solid transparent;
+    padding: 4px 5px 4px 8px;
+    margin-bottom: 0 !important;
+
+    @include sg-typography__button-body-text;
+
+    &:hover {
+      border-color: $color--royal-blue;
+      background-color: #eff5f7;
+    }
+  }
+
+  &__title, &__text-in-braces {
+    color: $color--royal-blue;
+    line-height: 16px;
+    margin-top: 0;
+    padding: 0 5px 0 0;
+    transition: all 0.3s ease 0s
+  }
+
+  &__input:checked + &__text-wrapper {
+    font-weight: 700;
+  }
+
+  &__input:checked ~ * &__text-in-braces {
+    display: none;
+  }
+
+  // Radio styles
+
+  &__input--radio + &__text-wrapper::before {
+    content: "";
+    display: block;
+    height: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+    min-width: 10px;
+    width: 10px;
+    background: $color--regular-white;
+    border: 1px solid $color--royal-blue;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+    box-sizing: border-box;
+  }
+
+  &__input--radio:checked + &__text-wrapper::before {
+    border-width: 3px;
+  }
+
+  // Checkbox styles
+
+  &__input--checkbox + &__text-wrapper::before {
+    content: '';
+    display: block;
+    width: 14px;
+    min-width: 14px;
+    height: 14px;
+    border: 1px solid $color--royal-blue;
+    margin-right: 5px;
+    transition: all .3s;
+    background: #fff;
+  }
+
+  &__input--checkbox + &__text-wrapper {
+    align-items: center;
+  }
+
+  &__input--checkbox:checked + &__text-wrapper::before {
+    @include sg-icon__checked($color--royal-blue);
+  }
+}

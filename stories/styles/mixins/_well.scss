@@ -1,0 +1,15 @@
+@mixin sg-well {
+    @include sg-typography__body-roboto;
+
+    padding: 25px;
+    background-color: $color--oyster-bay;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    color: $color--secondary;
+
+    @include sg-media__tablet-small-min {
+        padding: 25px 30px;
+    }
+}

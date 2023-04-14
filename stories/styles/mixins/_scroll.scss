@@ -1,0 +1,23 @@
+@mixin sg-scroll {
+    overflow-y: scroll;
+
+	@-moz-document url-prefix() {
+		margin-right: 0 !important;
+		scrollbar-color: $color--secondary $color--regular-white;
+		scrollbar-width: thin;
+	}
+
+	&::-webkit-scrollbar {
+		width: 3px;
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		background: $border--color-primary;
+		border: 1px solid $color--regular-white;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 2px;
+		background-color: $color--secondary;
+	}
+}
